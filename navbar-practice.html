@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Navbar Practice</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+  <main class="container my-4">
+    <h1>Bootstrap Navbar Practice</h1>
+    <p>Three examples adapted from the <a href="https://getbootstrap.com/docs/5.3/components/navbar/">Bootstrap navbar documentation</a>. <a href="index.html">See the finished grid page.</a></p>
+
+    <section class="mb-4" aria-labelledby="basic-heading">
+      <h2 class="h4" id="basic-heading">1. Basic navigation</h2>
+      <p><code>navbar-expand</code> keeps the links visible at every width. Removing the brand leaves just the links.</p>
+      <!-- Changed navbar-expand-lg to navbar-expand; removed the toggler and collapse wrapper. -->
+      <nav class="navbar navbar-expand bg-body-tertiary" aria-label="Basic example">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">My Pages</a>
+          <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="https://samuelmeseret.github.io/samuel_meseret_story_game_template/">Story Game</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="mb-4" aria-labelledby="collapse-heading">
+      <h2 class="h4" id="collapse-heading">2. Collapsing navigation</h2>
+      <p><code>navbar-expand-md</code> hides the links below 768 pixels. Changing <code>md</code> to <code>sm</code> makes them visible at 600 pixels. The button's <code>data-bs-target</code> must match the collapse container's <code>id</code>.</p>
+      <!-- Changed the expansion breakpoint from lg to md; removed the search form. -->
+      <nav class="navbar navbar-expand-md bg-primary" data-bs-theme="dark" style="--bs-navbar-color: #fff;" aria-label="Collapsing example">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">My Pages</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#practiceCollapse" aria-controls="practiceCollapse" aria-expanded="false" aria-label="Toggle collapsing example">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="practiceCollapse">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://numberonecapstone.vercel.app/puppypage.html">Puppy Page</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="mb-4" aria-labelledby="dropdown-heading">
+      <h2 class="h4" id="dropdown-heading">3. Navigation with a dropdown</h2>
+      <p><code>data-bs-toggle="dropdown"</code> makes the button open its menu. Removing that attribute stops the menu from opening. The Bootstrap JavaScript bundle powers both dropdowns and collapsing navigation.</p>
+      <!-- Changed to a dark theme; removed the extra menu item and divider. -->
+      <nav class="navbar navbar-expand bg-dark" data-bs-theme="dark" style="--bs-navbar-color: #fff;" aria-label="Dropdown example">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">My Pages</a>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Assignments</button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="https://numberonecapstone.vercel.app/puppypage.html">Puppy Page</a></li>
+                <li><a class="dropdown-item" href="https://numberonecapstone.vercel.app/webring.html">Webring</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

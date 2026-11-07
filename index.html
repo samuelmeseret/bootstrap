@@ -10,6 +10,12 @@
       background-color: #f2f2f2;
     }
 
+    .navbar.site-navbar {
+      background-color: #214d72;
+      --bs-navbar-color: #e5edf4;
+      --bs-navbar-hover-color: #fff;
+    }
+
     .character {
       background-color: white;
       border: 2px solid #555;
@@ -25,6 +31,35 @@
   </style>
 </head>
 <body>
+  <!-- Bootstrap's collapse button shows the links on smaller screens. -->
+  <nav class="navbar navbar-expand-lg site-navbar" data-bs-theme="dark" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Samuel's Pages</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://samuelmeseret.github.io/samuel_meseret_story_game_template/">Story Game</a>
+          </li>
+          <li class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">More Pages</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://numberonecapstone.vercel.app/puppypage.html">Puppy Page</a></li>
+              <li><a class="dropdown-item" href="https://numberonecapstone.vercel.app/webring.html">Webring</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Coming Soon</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <main class="container my-4">
     <h1>Which Fortnite character are you?</h1>
     <div class="row g-3 mb-3">
